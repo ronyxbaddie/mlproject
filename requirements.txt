@@ -1,4 +1,11 @@
 pandas
 numpy
 seaborn
--e .
+matplotlib
+scikit-learn
+catboost
+xgboost
+#comment out -e . otherwise whenever u run it to install required libraries it will build new and new packages
+#just type pip install -r requirements.txt
+#just build packages at the last 
+#-e .
