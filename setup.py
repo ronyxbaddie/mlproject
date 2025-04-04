@@ -1,14 +1,14 @@
 from setuptools import find_packages,setup
 from typing import List
 
-HYPEN_E_DOT = '-e .'
+HYPEN_E_DOT='-e .'
 def get_requirements(file_path:str)->List[str]:
     '''
     this function will return the list of requirements
     '''
     requirements=[]
     with open(file_path) as file_obj:
-        requirements = file_obj.readlines()
+        requirements=file_obj.readlines()
         requirements=[req.replace("\n","") for req in requirements]
 
         if HYPEN_E_DOT in requirements:
@@ -17,12 +17,11 @@ def get_requirements(file_path:str)->List[str]:
     return requirements
 
 setup(
-    name='mlproject',
-    version='0.0.1',
-    author='Raunak',
-    author_email='raunakpolist5258@gmail.com',
-    packages=find_packages(),
-    #finding packages in src folder files
-    #install_requires=['pandas','numpy','seaborn']
-    install_requires=get_requirements('requirements.txt')
+name='mlproject',
+version='0.0.1',
+author='Krish',
+author_email='krishnaik06@gmail.com',
+packages=find_packages(),
+install_requires=get_requirements('requirements.txt')
+
 )
